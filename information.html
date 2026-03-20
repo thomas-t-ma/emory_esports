@@ -22,20 +22,43 @@
 
   <div class="nav-center" id="mobileMenu">
     <a href="index.html">Home</a>
-    <a href="information.html">Schedule &amp; Map</a>
+    <a href="information.html">Schedule & Map</a>
     <a href="tournaments.html">Tournaments</a>
     <a href="cosplay.html">Cosplay</a>
     <a href="performances.html">Performances</a>
     <a href="workshops.html">Workshops</a>
+    <div class="mobile-contact">
+      <span class="mobile-contact-label">Contact Us</span>
+
+      <a href="YOUR_DISCORD_LINK_HERE" target="_blank" class="mobile-social">
+        <img src="images/discord-logo.webp" class="social-icon">
+        Discord
+      </a>
+
+      <a href="https://www.instagram.com/emory_esports/" target="_blank" class="mobile-social">
+        <img src="images/instagram-logo.webp" class="social-icon">
+        Instagram
+      </a>
+    </div>
   </div>
 
   <div class="nav-side nav-right">
     <img src="images/esports logo clear.webp" alt="Emory Esports Logo" class="club-logo">
-    <a href="https://www.instagram.com/emory_esports/" target="_blank" rel="noopener noreferrer" class="club-handle">
-      @emory_esports
+
+    <span class="contact-label">Contact Us:</span>
+
+    <a href="https://discord.com/invite/3hsYywUkPr" target="_blank" rel="noopener noreferrer" class="social-link">
+      <img src="images/discord-logo.webp" alt="Discord" class="social-icon">
+      <span class="social-text">Discord</span>
+    </a>
+
+    <a href="https://www.instagram.com/emory_esports/" target="_blank" rel="noopener noreferrer" class="social-link">
+      <img src="images/instagram-logo.webp" alt="Instagram" class="social-icon">
+      <span class="social-text">@emory_esports</span>
     </a>
   </div>
 </nav>
+
 
 <section class="subpage-hero" style="background-image:url('images/dooley.webp')">
   <div class="subpage-overlay">
@@ -56,7 +79,7 @@
         View the schedule below to see what to attend!
         </p>
         <div class="button-group">
-          <a href="#" class="info-button">View Schedule</a>
+          <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQVYp7m7xVBRYChmrDgPikWKwoFIU7svHm2E7PfOKmuAJ0bnhZ3LW3_jtXMFUaOMwhMMR2jnktN14xH/pubhtml?widget=true&headers=false" class="info-button">View Schedule</a>
         </div>
       </div>
 
@@ -80,9 +103,20 @@
 
     </div>
 
-    <div class="schedule-table-wrapper">
+    <!-- <div class="schedule-table-wrapper">
     <h2 class="map-card-heading">Schedule</h2>
     <table id="schedule-table"></table>
+    </div> -->
+
+    <div class="schedule-embed-wrapper">
+      <h2 class="map-card-heading">Schedule</h2>
+      <div class="schedule-embed-shell">
+        <iframe
+          class="schedule-embed"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQVYp7m7xVBRYChmrDgPikWKwoFIU7svHm2E7PfOKmuAJ0bnhZ3LW3_jtXMFUaOMwhMMR2jnktN14xH/pubhtml?widget=true&headers=false"
+          loading="lazy">
+        </iframe>
+      </div>
     </div>
 
   </div>

@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   line-height: 1.4;
   font-family: 'Poppins-Regular', sans-serif;
+  background: #001d57;
 }
 
 h1, h2 {
@@ -45,6 +46,8 @@ nav {
   height: 42px;
   width: auto;
   display: block;
+  margin-left: 20px;   /* adds space from edge */
+  margin-right: -6px;   /* brings it closer to "Contact Us" */
 }
 
 .club-handle {
@@ -82,6 +85,7 @@ nav {
   height: 60px;
   width: auto;
   display: block;
+  margin-right: 10px;
 }
 
 .section {
@@ -173,6 +177,7 @@ button {
 button:hover { transform: scale(1.05); }
 
 #countdown {
+  cursor: pointer;
   font-variant-numeric: tabular-nums;
   display: inline-flex;
   flex-direction: column;
@@ -206,7 +211,7 @@ button:hover { transform: scale(1.05); }
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1;
-  margin: 0;
+  margin: 6px;
   padding: 0;
 }
 
@@ -216,6 +221,16 @@ button:hover { transform: scale(1.05); }
   line-height: 1;
   margin: 0;
   padding: 0;
+}
+
+.countdown-link-text {
+  display: block;
+  /* margin-top: 10px; */
+  font-size: large;
+  font-family: 'Poppins-Bold', sans-serif;
+  color: white;
+  opacity: 0.95;
+  text-decoration: underline;
 }
 
 .info-sections {
@@ -243,9 +258,7 @@ button:hover { transform: scale(1.05); }
   order: 1;
 }
 
-.info-text-card,
 .info-image-card,
-.detail-text-card,
 .detail-image-card {
   border-radius: 24px;
   overflow: hidden;
@@ -259,6 +272,14 @@ button:hover { transform: scale(1.05); }
   display: flex;
   flex-direction: column;
   justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  max-width: 520px;
 }
 
 .info-text-card h2,
@@ -466,7 +487,182 @@ button:hover { transform: scale(1.05); }
   border-radius: 12px;
 }
 
-.schedule-table-wrapper {
+.schedule-embed-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.schedule-embed-shell {
+  background: white;
+  border-radius: 20px;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.schedule-embed {
+  width: 100%;
+  height: 350px;
+  border: none;
+  display: block;
+  border-radius: 12px;
+}
+
+.contact-label {
+  color: white;
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 1rem;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #F2A900;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 1rem;
+}
+
+.social-link:hover {
+  color: #ffd24d;
+}
+
+.social-icon {
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.social-text {
+  line-height: 1;
+}
+
+.cosplay-detail-section {
+  background:
+    linear-gradient(rgba(0, 29, 87, 0.72), rgba(0, 29, 87, 0.72)),
+    url('images/cosplay-background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: calc(100vh - 32vh);
+  box-sizing: border-box;
+}
+
+.performance-detail-section {
+  background:
+    linear-gradient(rgba(0, 29, 87, 0.72), rgba(0, 29, 87, 0.72)),
+    url('images/performance2.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 68vh;
+}
+
+.slideshow {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow .slide {
+  position: absolute;
+  max-width: 100%;
+  max-height: 700px; /* control size here */
+  width: auto;
+  height: auto;
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.slideshow .slide.active {
+  position: relative; /* THIS is key */
+  opacity: 1;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+
+.slide-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%);
+}
+
+.slide-btn.prev {
+  left: 14px;
+}
+
+.slide-btn.next {
+  right: 14px;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: flex;
+  gap: 8px;
+}
+
+.slide-dots .dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 0;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.slide-dots .dot.active {
+  background: white;
+}
+
+.slide-dots .dot:hover {
+  transform: none;
+}
+
+/* .schedule-table-wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -529,7 +725,7 @@ button:hover { transform: scale(1.05); }
 #schedule-table td:first-child {
   white-space: nowrap;
   width: 1%;
-}
+} */
 
 
 .menu-toggle {
@@ -620,21 +816,43 @@ button:hover { transform: scale(1.05); }
   transform: translateY(0);
 }
 
-@media (max-width: 1100px) {
-  .nav-center {
-    gap: 14px;
-  }
-
-  .nav-center a {
-    font-size: 1rem;
-  }
-
-  .club-handle {
-    font-size: 1rem;
-  }
+.mobile-contact {
+  display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
+  .mobile-contact {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-contact-label {
+    color: white;
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .mobile-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #F2A900;
+    text-decoration: none;
+    font-family: 'Poppins-Bold', sans-serif;
+  }
+
+  .mobile-social:hover {
+    color: #ffd24d;
+  }
+
   nav {
     display: flex;
     align-items: center;
@@ -724,6 +942,7 @@ button:hover { transform: scale(1.05); }
     width: 100%;
     box-sizing: border-box;
   }
+  
   .detail-row {
     grid-template-columns: 1fr;
   }
