@@ -15,7 +15,11 @@
     </a>
   </div>
 
-  <div class="nav-center">
+  <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">
+    ☰
+  </button>
+
+  <div class="nav-center" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="information.html">Schedule &amp; Map</a>
     <a href="tournaments.html">Tournaments</a>
@@ -44,8 +48,8 @@
     <div class="detail-row">
       <div class="detail-text-card">
         <p>
-        All events are hosted in the Multipurpose Rooms located on the first floor, North Pavilion of the Emory Student Center. Parking is free in
-        <a href="https://maps.google.com/?q=29+Eagle+Row+Atlanta+GA+30322" target="_blank" rel="noopener noreferrer" class="text-link">
+        All events are hosted in the Multipurpose Rooms located on the first floor, North Tower of the Emory Student Center. Parking is free in
+        <a href="https://maps.app.goo.gl/iSQVY97Vk33i43BC9" target="_blank" rel="noopener noreferrer" class="text-link">
             Peavine Visitor Lot
         </a>.
         View the schedule below to see what to attend!
@@ -56,17 +60,30 @@
       </div>
 
       <div class="detail-image-card">
-        <img src="images/esc.jpg" alt="Emory University map and location">
+        <img src="images/esc.jpg" alt="Emory Student Center">
       </div>
     </div>
-    <h1 class="section-heading">Parking</h1>
-    <div class="detail-full-image-card">
-      <img src="images/parking.png" alt="Additional EagleCon information image">
+
+    <div class="map-card-grid">
+        <div class="map-card">
+        <h2 class="map-card-heading">Parking</h2>
+        <img src="images/parking.png" alt="Parking map" class="map-image">
+        </div>
+
+        <div class="map-card">
+        <h2 class="map-card-heading">Event Map</h2>
+            <div class="map-image-frame">
+            <img src="images/esc_map.png" alt="Event map" class="map-image map-image-full">
+            </div>
+        </div>
+
     </div>
-    <h1 class="section-heading">Event Map</h1>
-    <div class="detail-full-image-card">
-      <img src="images/esc_map.png" alt="Additional EagleCon information image">
+
+    <div class="schedule-table-wrapper">
+    <h2 class="map-card-heading">Schedule</h2>
+    <table id="schedule-table"></table>
     </div>
+
   </div>
 </section>
 

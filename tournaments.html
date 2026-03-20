@@ -16,7 +16,12 @@
     </a>
   </div>
 
-  <div class="nav-center">
+<button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">
+    ☰
+  </button>
+
+
+  <div class="nav-center" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="information.html">Schedule &amp; Map</a>
     <a href="tournaments.html">Tournaments</a>
@@ -41,22 +46,50 @@
 </section>
 
 <section class="detail-section">
-  <div class="detail-row">
-    <div class="detail-text-card">
-      <p>
-        If you play Minecraft, League of Legends, Valorant, or Smash, you can use this page for bracket info, rulesets, sign-up details, and prize information. You can also add information about the retro arcade, board games, and freeplay room for more casual attendees.
-      </p>
-      <div class="button-group">
-        <a href="#" class="info-button">Tournament Sign-Up</a>
-        <a href="#" class="info-button">Rules &amp; Format</a>
-        <a href="#" class="info-button">Freeplay Info</a>
-      </div>
-    </div>
 
-    <div class="detail-image-card">
-      <img src="images/tournaments.jpeg" alt="EagleCon tournaments">
+  <div class="feature-block fade-in-section">
+    <img src="images/Emory Esports Hypixel Tournament png_ver.png" alt="">
+    <div class="feature-text left">
+      <p>
+        Players will compete in Bedwars, Build Battle, and more to win a rank upgrade and an exclusive, custom-made Hypixel-themed trophy! We are not taking sign-ups, so just walk in to compete!
+      </p>
+      <p>
+        The tournament will be streamed live on YouTube by
+        <a href="https://www.youtube.com/uranicc" target="_blank" class="text-link">
+    Uranic
+    </a>.
+    Although it is not mandatory, we ask that you share your screen through our Discord.
+      </p>
+      <!-- <div class="button-group">
+        <a href="#" class="info-button">Minecraft Form</a>
+      </div> -->
     </div>
   </div>
+
+  <div class="feature-block fade-in-section">
+    <img src="images/tournament-image-2.png" alt="">
+    <div class="feature-text right">
+      <p>
+        Valorant / League info here.
+      </p>
+      <div class="button-group">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSemCUVwm3LTPFu8BLLPPWM-U5pXXdr7zjvb4IWk5Reafcxexw/viewform" class="info-button">League/Valorant Tournament Form</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-block fade-in-section">
+    <img src="images/tournament-image-3.png" alt="">
+    <div class="feature-text left">
+      <p>
+        Smash info here.
+      </p>
+      <div class="button-group">
+        <a href="https://www.start.gg/tournament/eaglecon-2026/details" class="info-button">Smash Tournament Form</a>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <script src="script.js"></script>
