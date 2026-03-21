@@ -14,7 +14,7 @@ function updateCountdown() {
 
   el.style.cursor = "pointer";
   el.onclick = () => {
-    window.open("PASTE_YOUR_GOOGLE_FORM_LINK_HERE", "_blank");
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdAdkI9pTxtcWqXAV4RiBb40iXzPHhuOsHZCv1Raj7GqFkl2w/viewform", "_blank");
   };
 
   if (diff <= 0) {
