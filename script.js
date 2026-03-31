@@ -13,15 +13,14 @@ function updateCountdown() {
   if (!el) return;
 
   el.style.cursor = "pointer";
-  el.onclick = () => {
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdAdkI9pTxtcWqXAV4RiBb40iXzPHhuOsHZCv1Raj7GqFkl2w/viewform", "_blank");
-  };
+  // el.onclick = () => {
+  //   window.open("https://docs.google.com/forms/d/e/1FAIpQLSdAdkI9pTxtcWqXAV4RiBb40iXzPHhuOsHZCv1Raj7GqFkl2w/viewform", "_blank");
+  // };
 
   if (diff <= 0) {
     el.innerHTML = `
-      <span class="date">March 29, 2026</span>
-      <span class="time">EagleCon is LIVE!</span>
-      <span class="countdown-link-text">Click here to fill out the interest form!</span>
+      <span class="date">EagleCon 2026 has concluded.</span>
+      <span class="time">Thank you for attending!</span>
     `;
     return;
   }
